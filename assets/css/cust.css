@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "cand";
+  src: url("../fonts/Candara.ttf"), url("../fonts/Candarab.ttf"), url("../fonts/Candarai.ttf"), 
+  url("../fonts/Candaraz.ttf");
+}
+.body{
+	background: url('../img/fondo.png');
+	margin-right: 11%;
+    margin-left: 11%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+	font-family: cand !important;
+}
+/* Contenido 1 */
+.contenido{
+	background: #fff;
+	width: auto;
+    padding-right: 1%;
+    padding-left: 1%;
+    box-shadow: 2px 2px 2px gray;
+    overflow: hidden;
+    text-align: justify;
+}
+.body2{
+    margin-top: -1%;
+    margin-right: -2px;
+    margin-left: -2px;
+    width: 100%;
+    height: auto;
+	font-family: cand !important;
+}
+/* Contenido 2 */
+.content{
+	background: #FCFDF7;
+	width: auto;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+.banner{
+    width: 140% !important;
+    padding-right: 2%;
+    padding-left: 2%;
+}
+/* Contenido real de la pagina*/
+.rbody{
+    width: 100%;
+    margin-right: 2%;
+    padding-left: 2%;
+    padding-bottom: -25px !important;
+    margin-bottom: -25px !important;
+    text-align: justify;
+}
+.marcador{
+    display: inline;
+    width: 50px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-top: 0!important;
+    height: 3px !important;
+}
+.contactenos{
+    background: url("../img/contact.jpg");
+    color: #FFFFFF;
+    font-size: 23px !important;
+}
+.contactenos .conte{
+    padding: 3% !important;
+}
+.conte textarea, .conte input{
+    width: 50%;
+    resize: none;
+}
+.comentarop {
+    width: 50% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    text-align: none !important;
+}
+.btna{
+    background-color: #fff !important;
+    color: #0101b0;
+    font-weight: bolder;
+    border-radius: 0 !important;
+    max-width: 30%;
+}
+.btna:hover{
+    background-color: #0101b0 !important;
+    color: #f8f9fa !important;
+}
+.nava{
+    padding-right: 1%;
+    padding-left: 2%;
+}
+/*Volver arriba*/
+.ir-arriba {
+	display:none;
+	padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+	background: #FFF;
+	font-size:20px;
+	color: #0101b0;
+	cursor:pointer;
+	position: fixed;
+	bottom:20px;
+	right:20px;
+}
+.ir-arriba:hover{
+    background: #0101b0;
+    color: #FFF;
+}
+/*Clases personaliadas de Bootstrap*/
+.nav-item .nav-link{
+    color: #000 !important;
+    font-weight: bold;
+}
