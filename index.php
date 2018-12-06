@@ -3,7 +3,7 @@
 
 <head>
     <title>G&oacute;chez - Manc&iacute;a</title>
-    <?php require_once 'templates/head.php'; ?>
+    <?php require_once 'templates/head.php'; require_once 'core/proc.php' ?>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
     <link rel="stylesheet" href="assets/css/compact-gallery.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -55,12 +55,17 @@
     </script>
     <div class="contenido">
         <div class="nava">
-            <?php require_once 'templates/nav.php'; ?>
+            <?php 
+            require_once 'templates/nav.php';
+            $db = new procedimientos();
+            $res = $db->query("select img from portada");
+            ?>
+            
         </div>
         <div class="rbody">
             <div class="row">
                 <div class="col">
-                    <img src="assets/img/slide.jpg" alt="" class="img-fluid banner">
+                    <img src="<?=$res[0]['img']?>" alt="" class="img-fluid banner">
                 </div>
             </div>
 

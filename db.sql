@@ -21,15 +21,17 @@ CREATE TABLE portada(
     ENGINE = INNODB
     DEFAULT CHARSET = utf8;
     
-INSERT INTO portada VALUES (NULL, 'assets/img/portada.jpg');
+INSERT INTO portada VALUES (NULL, 'assets/img/slide.jpg');
     
 CREATE TABLE categorias (
     id_cat INT NOT NULL AUTO_INCREMENT,
     cat VARCHAR (200) NOT NULL,
     PRIMARY KEY (id_cat)
 )
-    ENGINE = INNODB
+    ENGINE = INNODB 
     DEFAULT CHARSET = utf8;
+    
+    
     
 CREATE TABLE proyectos(
     id_proy INT NOT NULL AUTO_INCREMENT,
