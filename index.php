@@ -13,6 +13,7 @@
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/cust.js"></script>
     <script>
         $(document).ready(function() {
             if (screen.width < 720) {
@@ -51,14 +52,13 @@
                 $("#btn3").attr("src", "assets/img/btn3.png");
               });
         });
-
     </script>
     <div class="contenido">
         <div class="nava">
             <?php 
             require_once 'templates/nav.php';
             $db = new procedimientos();
-            $res = $db->query("select img from portada");
+            $res = $db->query("select img from img_sli");
             ?>
             
         </div>
@@ -77,7 +77,7 @@
                         <span class="font-weight-bold" style="font-size: 22px;">NOS ESPECIALIZAMOS EN</span><br>
                         <div style="width: 80% !important;  text-align: justify; padding-left: 5% !important; font-size:  17px;">
                             <span class="font-weight-bold">
-                                Somos una empresa dedicada al diseño, construcci&oacute;n, y supervisi&oacute;n de proyectos.
+                                Somos una empresa dedicada al dise&ntilde;o, construcci&oacute;n, y supervisi&oacute;n de proyectos.
                             </span>
                             <br>
                             <div style="padding-top: 5%;" id="btns">
@@ -99,48 +99,14 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <img src="assets/img/linea.png" alt="" class="marcador">
-                        <span class="font-weight-bold" style="font-size: 22px;">PORTAFOLIO</span><br>
+                        <span class="font-weight-bold" style="font-size: 22px;">PORTAFOLIO</span>
                     </div>
                 </div>
-                <br>
-                <br>
                 <div class="row">
                     <div class="col-lg-12">
                         <section class="gallery-block compact-gallery" style="padding-bottom: 0 !important;">
                             <div class="row  no-gutters" id="gallery">
-                                <div class="col-lg-5">
-                                    <div class="col-md-6 col-lg-12 item zoom-on-hover" style="height: 100% ! important; width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
-                                        <a class="lightbox" href="assets/img/g1.jpg" style="height: 100% !important; width: 100% !important;">
-                                            <img class="img-fluid image" src="assets/img/g1.jpg" style="height: 100% !important; width: 100% !important;">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="col-md-6 col-lg-12 item zoom-on-hover" style="height: 50% !
-important; width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
-                                        <a class="lightbox" href="assets/img/g2.jpg" style="height: 100% !important; width: 100% !important;">
-                                            <img class="img-fluid image" src="assets/img/g2.jpg" style="height: 100% !important; width: 100% !important;">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-6 col-lg-12 item zoom-on-hover" style="height: 50% !
-important; width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
-                                        <a class="lightbox" href="assets/img/g3.jpg" style="height: 100% !important; width: 100% !important;">
-                                            <img class="img-fluid image" src="assets/img/g3.jpg" style="height: 100% !important; width: 100% !important;">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4">
-                                    <div class="col-md-6 col-lg-12 item zoom-on-hover" style="height: 50% ! important; width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;">
-                                        <a class="lightbox" href="assets/img/g5.jpg" style="height: 100% !important; width: 100% !important;">
-                                            <img class="img-fluid image" src="assets/img/g5.jpg" style="height: 100% !important; width: 100% !important;">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-12 item zoom-on-hover" style="height: 50% ! important; width: 100% !important; padding-right: 0 !important; padding-left: 0 !important;" style="height: 100% !important; width: 100% !important;">
-                                        <a class="lightbox" href="assets/img/g4.jpg">
-                                            <img class="img-fluid image" src="assets/img/g4.jpg" style="height: 100% !important; width: 100% !important;">
-                                        </a>
-                                    </div>
-                                </div>
+                            
                             </div>
                         </section>
                     </div>
@@ -149,29 +115,29 @@ important; width: 100% !important; padding-right: 0 !important; padding-left: 0 
                 <div class="row">
                     <div class="col-lg-12">
                         <img src="assets/img/linea.png" class="marcador">
-                        <span class="font-weight-bold" style="font-size: 22px;">CONTÁCTANOS</span><br>
+                        <span class="font-weight-bold" style="font-size: 22px;">CONT&Aacute;CTANOS</span><br>
                     </div>
                 </div>
                 <br>
                 <div class="contactenos">
                     <div class="conte">
                         <div class="form-group">
-                            <form action="">
+                            <form action="email.php" method="post">
                                 <div class="row">
-                                    <div class="col-lg-2"><label for="nombre">Nombre:</label></div>
-                                    <div class="col-lg-10"><input type="text" name="" id="nombre" required></div>
+                                    <div class="col-lg-2"><label for="nom">Nombre *:</label></div>
+                                    <div class="col-lg-10"><input type="text" name="nom" id="nom" required></div>
                                 </div><br>
                                 <div class="row">
-                                    <div class="col-lg-2"><label for="nombre">Email:</label></div>
-                                    <div class="col-lg-10"><input type="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" name="" id="email" required></div>
+                                    <div class="col-lg-2"><label for="mail">Email *:</label></div>
+                                    <div class="col-lg-10"><input type="email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" name="mail" id="mail" required></div>
                                 </div><br>
                                 <div class="row">
-                                    <div class="col-lg-2"><label for="nombre">Teléfono:</label></div>
-                                    <div class="col-lg-10"><input type="tel" pattern="[0-9]{8}" name="" id="tel"></div>
+                                    <div class="col-lg-2"><label for="tel">Tel&eacute;fono:</label></div>
+                                    <div class="col-lg-10"><input type="tel" pattern="[0-9]{8}" name="tel" id="tel"></div>
                                 </div><br>
                                 <div class="row">
-                                    <div class="col-lg-2"><label for="nombre">Comentario:</label></div>
-                                    <div class="col-lg-10"><textarea required name="" id="coment" cols="20" rows="3"></textarea></div>
+                                    <div class="col-lg-2"><label for="messa">Comentario: *</label></div>
+                                    <div class="col-lg-10"><textarea required name="messa" id="messa" cols="20" rows="3"></textarea></div>
                                 </div><br>
                                 <div class="row">
                                     <div class="col-lg-12">
@@ -227,11 +193,11 @@ important; width: 100% !important; padding-right: 0 !important; padding-left: 0 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script>
-        baguetteBox.run('.compact-gallery', {
-            animation: 'slideIn'
-        });
+//        baguetteBox.run('.compact-gallery', {
+//            animation: 'slideIn'
+//        });
         $(document).ready(function() {
-
+            loadG();
             $('.ir-arriba').click(function() {
                 $('body, html').animate({
                     scrollTop: '0px'
@@ -250,6 +216,43 @@ important; width: 100% !important; padding-right: 0 !important; padding-left: 0 
 
     </script>
     <span class="ir-arriba icon-arrow-up2"><i class="fas fa-angle-up"></i></span>
+    
+    
+    
+    <div class="modal fade" id="error" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Alerta</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <?php
+                        switch($_GET['er']){
+                            case 1:
+                                echo "<div class=\"alert alert-success\" role=\"alert\">Mensaje enviado exitosamente</div>";
+                                break;
+                            case 2:
+                                echo "<div class=\"alert alert-danger\" role=\"alert\">No se pudo enviar su mensaje, por favor intentelo de nuevo</div>";
+                                break;
+                            case 3:
+                                echo "<div class=\"alert alert-danger\" role=\"alert\">No estan definidas las variables</div>";
+                                break;
+                        }
+                        ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    <?php
+            if(isset($_GET['er'])){
+                echo "$(\"#error\").modal(\"show\");";
+            }
+            ?>
+    </script>
 </body>
 
 </html>

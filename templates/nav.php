@@ -20,7 +20,7 @@
         <a class="nav-link" href="proyectos.php" id="proyectos">PORTAFOLIO</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contac.php" id="contacto">COT&Aacute;CTENOS</a>
+        <a class="nav-link" href="contac.php" id="contacto">CONT&Aacute;CTENOS</a>
       </li>
     </ul>
   </div>

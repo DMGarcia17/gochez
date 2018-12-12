@@ -50,6 +50,7 @@
     padding-left: 2%;
     padding-bottom: -25px !important;
     margin-bottom: -25px !important;
+    
     text-align: justify;
 }
 .marcador{
@@ -116,4 +117,26 @@
 .nav-item .nav-link{
     color: #000 !important;
     font-weight: bold;
+}
+
+/*Categoria actual*/
+
+.actcat{
+    background: #0000b0;
+    color: #fff;
+}
+
+.categoria{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.categoria:hover{
+    background: #454af2;
+    color: #FFF;
+}
+
+.actual{
+    background: #0000b0;
+    color: #fff;
 }
